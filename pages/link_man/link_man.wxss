@@ -1,0 +1,239 @@
+li{
+    list-style: none;
+  }
+.link_info{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 2px 3px 5px #ddd;
+}
+.link_tit{
+    background: #f6f5fa;
+    width: 100%;
+    height: 80rpx;
+    font-size: 27rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 7%;
+    color: #448ff7;
+}
+.link_detail_info{
+    background: white;
+}
+.link_detail_name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90rpx;
+    border-bottom: 1px #acacac solid;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+.link_detail_name p{
+    font-size: 30rpx;
+    color: #000000;
+}
+.link_detail_name  input{
+  font-size: 30rpx;
+}
+.user_sexbox{
+    display: flex;
+}
+/* 单选框 */
+
+/* textarea */
+  .linkman_textarea{
+    width: 100%;
+    resize: none;
+    border:none;
+    border-bottom: 1px #acacac solid;
+    font-size: 30rpx;
+    height: 150rpx;
+  }
+
+  /* 提交 */
+  .linkman_next{
+    width: 100%;
+    height: 90rpx;
+    background: #448ff7;
+    color: #ffffff;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left:0;
+}
+.link_input{
+  text-align: right;
+  font-size: .65rem;
+
+}
+
+/* 下拉框 */
+.top {
+  width: 400rpx;
+  height: 95rpx;
+  line-height: 95rpx;
+  font-size: 30rpx;
+  z-index: 100;
+}
+
+.top-text {
+  float: left;
+}
+
+/* 下拉框 */
+.top-selected {
+  width: 60%;
+  display: flex;
+  float: right;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  border: 1px solid #ccc;
+  border-right:none;
+  border-top:none;
+  border-bottom: none;
+  padding-left: 10rpx;
+  font-size: 30rpx;
+}
+
+/* 下拉内容 */
+
+.select_box {
+  background-color: #fff;
+  width: 62%;
+  height: 300rpx;
+  float: right;
+  position: relative;
+  right: 0;
+  overflow: hidden;
+  text-align: left;
+  animation: myfirst 0.3s;
+  font-size: 30rpx;
+  z-index: 100;
+  overflow-y: scroll;
+}
+
+.select_one {
+  padding-left: 20rpx;
+  width: 100%;
+  height: 90rpx;
+  position: relative;
+  line-height: 90rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 下拉过度效果 */
+
+@keyframes myfirst {
+  from {
+    height: 0rpx;
+  }
+
+  to {
+    height: 300rpx;
+  }
+}
+
+/* 下拉图标 */
+
+.top-selected image {
+  height: 50rpx;
+  width: 50rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 20rpx;
+}
+/* radio */
+.parameter-info{
+  display: inline-block;
+  width: 90rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.checked_parameter{
+  background: #448ff7;
+  border-radius: 5px;
+  color: #fff;
+}
+/* city */
+.link_city{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+  border-bottom: 1px #acacac solid;
+  padding-left: 20rpx;
+  padding-right: .5rem;
+  font-size: 30rpx;
+  }
+  .chooseCity{
+    width: 100%;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+    border-bottom: 1px solid #666;
+  }
+  .boxcity{
+    position: absolute;
+    width: 40%;
+    right: 0;
+    top:0;
+    height: 60%;
+    z-index: 100;
+    background: #ffffff;
+  }
+  .citys{
+    border-top: 1px solid #666; 
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: #ffffff;
+  }
+  .province{
+    height: 100%;
+  }
+  .citys::-webkit-scrollbar {
+    display: none;
+  }
+  ul{
+    margin:0;
+    padding:0;
+  }
+ li{
+  list-style: none;
+  margin-bottom: 35rpx;
+  font-size: 30rpx;
+  display: block;
+}
+.chooseTit {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+  background: #448ff7;
+  align-items: center;
+}
+.chooseTit p{
+  color: #ffffff;
+  font-size: 32rpx;
+}
+.mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .7;
+  top:0;
+  left: 0;
+  z-index: 90;
+}
+
+ 

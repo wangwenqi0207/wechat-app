@@ -1,0 +1,23 @@
+{
+  "pages": [ 
+    "pages/index/index",
+    "pages/link_man/link_man",
+    "pages/myasses/myasses",
+    "pages/user_info/user_info",
+    "pages/myassesinfo/myassesinfo",
+    "pages/bilityform/bilityform",
+    "pages/home_page/home_page",
+    "pages/imgdemo/imgdemo",
+    "pages/bilitysucc/bilitysucc",
+    "pages/successful/successful",   
+    "pages/bility_login/bility_login",
+    "pages/applyfor/applyfor"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我来照顾",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

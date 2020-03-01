@@ -1,0 +1,24 @@
+<!--pages/applyfor/applyfor.wxml-->
+<view class="apply_for">
+    <view class="apply_info">
+        <view class="my_apply">
+            <text>我要申请</text>
+            <li></li>
+        </view>
+            <form bindsubmit="formSubmit">
+                <view class="apply_name">
+                    <li>参保人姓名</li>
+                    <input type="text" placeholder="请输入参保人姓名" maxlength="12"  
+                    bindinput="userName"  name="userName" value="{{userName}}"/>
+                </view>
+                 <view class="apply_name">
+                    <li>身份证号</li>
+                    <input type="text" placeholder="请输入身份证号" maxlength="21" 
+                    bindinput="insIdcard"  name="insIdcard" value="{{insIdcard}}"/>
+                </view>
+            <li>
+              <button id="next" class="next_step" form-type="submit">校验并下一步</button>
+            </li>
+            </form>
+    </view>
+</view>

@@ -1,0 +1,21 @@
+<view class="btn-area">
+  <view>
+    <view class="login">
+    <h1 class="login_title">请使用手机号登录</h1>
+    <form onSubmit="formSubmit">
+      <view class="login_input">
+          <input class="phone_number" type="text" placeholder="请输入手机号" 
+          maxlength="11" name="phone_number" value="{{phone_number}}" bindinput="phone_number"/>
+      </view>
+       <view class="login_input login_input2">
+          <input class="check_code" type="text" 
+          placeholder="请输入验证码" name="check_code" bindinput="check_code"/>
+          <button class="get_code  {{ code_active?'isActive':'' }}"  bindtap="get_login" disabled="{{isDisabled}}">{{get_code}}</button>
+      </view>
+      <view class="login_next">
+       <button form-type="submit" bindtap="formSubmit">下一步</button>
+      </view>
+    </form>
+    </view>
+</view>
+</view>

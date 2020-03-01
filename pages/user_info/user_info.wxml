@@ -1,0 +1,34 @@
+<!--pages/user_info/user_info.wxml-->
+ <view class="user_info">
+        <view class="user_tit">
+            填写参保人信息（1/2）
+        </view>
+        <view class="detail_info">
+            <view class="detail_name">
+                <text>参保人姓名</text>
+                <text>{{user}}</text>
+            </view>
+             <view class="detail_name">
+                <text>身份证号</text>
+                <text>{{card}}</text>
+            </view>
+              <view class="detail_name">
+                <text>性别</text>
+                <text>{{sex}}</text>
+            </view>
+             <view class="detail_name">
+                <text>手机</text>
+                <text>{{detail_phone}}</text>
+          </view>
+            <view class="up_idcard">
+                <text>请上传参保人身份证照片</text>
+                <view class="user_info_idcard">
+                    <image src="{{srcbox1}}" class="user_box1"  mode="aspecFill"  catchtap="uploadimg1"/>
+                    <image src="{{srcbox2}}" class="user_box2"  mode="aspecFill"  catchtap="uploadimg2"/>
+                </view>
+            </view>
+        </view> 
+        <view class="user_info_next" bindtap="userNext"> 
+            下一步
+        </view>
+    </view>

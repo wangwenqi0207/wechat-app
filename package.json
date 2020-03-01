@@ -1,0 +1,15 @@
+{
+  "name": "apply_ecare_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@www.ecare.org.cn:wwq/wechat-app.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

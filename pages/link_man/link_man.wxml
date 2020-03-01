@@ -1,0 +1,90 @@
+<!--pages/link_man/link_man.wxml-->
+<view class="link_info">
+  <view class="link_tit">
+    填写联系人信息（2/2）
+  </view>
+  <view class="link_detail_info">
+    <view class="link_detail_name">
+      <p>联系人姓名</p>
+      <input type="text" maxlength="12" class="link_input" 
+      placeholder="(请填写)" bindinput="link_name" value="{{link_name}}"/>
+    </view>
+    <!-- 性别选择 -->
+    <view class="link_detail_name">
+      <p>性别</p>
+      <view class="user_sexbox">
+        <view class='parameter-wrap'>
+          <block wx:for="{{parameter}}" wx:key="parameter">
+            <text class='parameter-info text-over {{item.checked?"checked_parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.name}}</text>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="link_detail_name">
+      <p>身份证号</p>
+      <input type="text" maxlength="25" class="link_input" 
+      placeholder="(请填写)" bindinput="link_id"  value="{{link_id}}"/>
+    </view>
+    <view class="link_detail_name">
+      <p>手机号</p>
+      <input type="text" maxlength="11" class="link_input" 
+      placeholder="(请填写)" bindinput="link_phone" value="{{link_phone}}"/>
+    </view>
+    <!-- 下拉选框 -->
+    <view class="link_detail_name">
+      <p>与参保人关系</p>
+      <!-- 下拉框 -->
+      <view class='top'>
+        <view class='top-selected' bindtap='bindShowMsg'>
+          <text>{{grade_name}}</text>
+        </view>
+        <!-- 下拉需要显示的列表 -->
+        <view class="select_box" wx:if="{{select}}">
+          <view wx:for="{{grades}}" wx:key="item.id">
+            <view class="select_one" bindtap="mySelect" data-id='{{item.id}}' data-name="{{item.label}}">{{item.label}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 选择地区 -->
+  <view class="link_tit link_address">
+    选择地区
+  </view>
+  <!-- 城市 -->
+  <view>
+    <p bindtap="clickCity" class="link_city">{{chooseCity}}</p>
+    <view class="boxcity" wx:if="{{showCity}}">
+      <view class="chooseTit">
+        <p bindtap="chooseProvince" wx:if='{{tit1}}'>{{chooseTit1}}</p>
+        <p bindtap="chooseCity2" wx:if='{{tit2}}'>{{chooseTit2}}</p>
+        <p wx:if='{{tit3}}'>{{chooseTit3}}</p>
+      </view>
+      <view class="citys">
+        <view bindtap="getCity" class="province">
+          <ul wx:if="{{showProvince}}">
+            <li wx:for="{{provinceL}}" wx:key="item.regionId" bindtap="getProvince" 
+            data-name="{{item.regionName}}" data-id='{{item.regionId}}'>{{item.regionName}}</li>
+          </ul>
+          <ul wx:if="{{showCity2}}">
+            <li wx:for="{{cityL}}" wx:key="item.regionId" 
+            bindtap="getCity2" data-name="{{item.regionName}}" data-id='{{item.regionId}}'>{{item.regionName}}</li>
+          </ul>
+          <ul wx:if="{{showarea}}">
+            <li wx:for="{{areaL}}" wx:key="item.regionId" bindtap="getarea" data-name="{{item.regionName}}" 
+            data-id='{{item.regionId}}'
+            >{{item.regionName}}</li>
+          </ul>
+        </view>
+      </view>
+    </view>
+    <view class="mask" wx:if="{{mackShow}}" bindtap="closeMask"></view>
+  </view>
+  <view class="link_tit link_address">
+    联系地址（请填写具体真实信息）
+  </view>
+  <textarea class="linkman_textarea" maxlength="100" bindinput="link_textarea" value="{{link_textarea}}"></textarea>
+  <view class="linkman_next" bindtap="linkNext">
+    提交
+  </view>
+</view>

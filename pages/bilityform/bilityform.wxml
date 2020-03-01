@@ -1,0 +1,163 @@
+<!--pages/bility_login/bility_login.wxml-->
+<view class="bility_form">
+  <view class="bility_info">
+    <p>1.参保人姓名</p>
+    <input type="text" maxlength="12" placeholder="请输入姓名" bindinput="name" />
+  </view>
+  <view class="bility_info">
+    <p>2.身份证号码</p>
+    <input type="text" maxlength="21" placeholder="请输身份证" bindinput="idcard" />
+  </view>
+  <view class="bility_info">
+    <p>3.省市区</p>
+    <!-- 城市 -->
+    <view>
+      <p bindtap="clickCity" class="link_city">{{chooseCity}}</p>
+      <view class="boxcity" wx:if="{{showCity}}">
+        <view class="chooseTit">
+          <p bindtap="chooseProvince" wx:if='{{tit1}}'>{{chooseTit1}}</p>
+          <p bindtap="chooseCity2" wx:if='{{tit2}}'>{{chooseTit2}}</p>
+          <p wx:if='{{tit3}}'>{{chooseTit3}}</p>
+        </view>
+        <view class="citys">
+          <view bindtap="getCity" class="province">
+            <ul wx:if="{{showProvince}}">
+              <li wx:for="{{provinceL}}" wx:key="item.regionId" bindtap="getProvince" data-name="{{item.regionName}}" data-id='{{item.regionId}}'>{{item.regionName}}</li>
+            </ul>
+            <ul wx:if="{{showCity2}}">
+              <li wx:for="{{cityL}}" wx:key="item.regionId" bindtap="getCity2" data-name="{{item.regionName}}" data-id='{{item.regionId}}'>{{item.regionName}}</li>
+            </ul>
+            <ul wx:if="{{showarea}}">
+              <li wx:for="{{areaL}}" wx:key="item.regionId" bindtap="getarea" data-name="{{item.regionName}}" data-id='{{item.regionId}}'>{{item.regionName}}</li>
+            </ul>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bility_textarea">
+    <textarea name="" id="" placeholder="请输详细地址" cols="3" bindinput="address"></textarea>
+  </view>
+  <view class="bility_info link_name">
+    <p>4.联系人姓名</p>
+    <input type="text" maxlength="12" placeholder="请输入姓名" bindinput="linkname" />
+  </view>
+  <view class="bility_info">
+    <p>5.联系人身份证号码</p>
+    <input type="text" maxlength="21" placeholder="请输身份证" bindinput="linkcard" />
+  </view>
+  <view class="bility_info">
+    <p>6.联系人电话</p>
+    <input type="text" maxlength="12" placeholder="请输联系人电话" bindinput="linkNum" />
+  </view>
+  <view class="bility_info">
+    <p>7.与参保人关系</p>
+     <!-- 下拉框 -->
+      <view class='top'>
+        <view class='top-selected' bindtap='bindShowMsg'>
+          <text>{{grade_name}}</text>
+        </view>
+        <!-- 下拉需要显示的列表 -->
+        <view class="select_box" wx:if="{{select}}">
+          <view wx:for="{{grades}}" wx:key="item.id">
+            <view class="select_one" bindtap="mySelect" data-id='{{item.id}}' data-name="{{item.label}}">{{item.label}}</view>
+          </view>
+      </view>
+      </view>
+  </view>
+  <!-- 失能评估表选项 -->
+      <view>
+        <view class="optins_info" >
+            <p>8.进食</p>
+            <view class="bility_info_option">
+               <!-- 单项选择器radio-group: 内部由多个<radio/>组成 -->
+              <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio {{item.checked ? 'active' : ''}}" wx:for="{{radios}}" wx:key='item.value'>
+                  <view class="radio-icon"></view>
+                  <radio value="{{item.value}}" checked="{{item.checked}}" 
+                />{{item.label}}
+                </label>
+              </radio-group>
+            </view>
+        </view>
+         <view class="optins_info" >
+            <p>9.头部清洁及洗浴</p>
+            <view class="bility_info_option">
+              <radio-group class="radio-group" bindchange="radioChange2">
+                <label class="radio {{item.checked ? 'active' : ''}}" wx:for="{{radios2}}" wx:key='item.value'>
+                  <view class="radio-icon"></view>
+                  <radio value="{{item.value}}" checked="{{item.checked}}" data-id='{{item.value}}' data-name="{{item.label}}"/>{{item.label}}
+                </label>
+              </radio-group>
+            </view>
+        </view>
+         <view class="optins_info" >
+            <p>10.穿衣</p>
+            <view class="bility_info_option">
+              <radio-group class="radio-group" bindchange="radioChange3">
+                <label class="radio {{item.checked ? 'active' : ''}}" wx:for="{{radios3}}" wx:key='item.value'>
+                  <view class="radio-icon"></view>
+                  <radio value="{{item.value}}" checked="{{item.checked}}" data-id='{{item.value}}' data-name="{{item.label}}"/>{{item.label}}
+                </label>
+              </radio-group>
+            </view>
+        </view>
+         <view class="optins_info" >
+            <p>11.大小便及如厕</p>
+            <view class="bility_info_option">
+               <radio-group class="radio-group" bindchange="radioChange4">
+                <label class="radio {{item.checked ? 'active' : ''}}" wx:for="{{radios4}}" wx:key='item.value'>
+                  <view class="radio-icon"></view>
+                  <radio value="{{item.value}}" checked="{{item.checked}}" data-id='{{item.value}}' data-name="{{item.label}}"/>{{item.label}}
+                </label>
+              </radio-group> 
+            </view>
+        </view>
+         <view class="optins_info" >
+            <p>12.移动</p>
+            <view class="bility_info_option">
+               <radio-group class="radio-group" bindchange="radioChange5">
+                <label class="radio {{item.checked ? 'active' : ''}}" wx:for="{{radios5}}" wx:key='item.value'>
+                  <view class="radio-icon"></view>
+                  <radio value="{{item.value}}" checked="{{item.checked}}" data-id='{{item.value}}' data-name="{{item.label}}"/>{{item.label}}
+                </label>
+              </radio-group> 
+            </view>
+        </view>
+         <view class="optins_info" >
+            <p>13.疾病</p>
+            <view class="bility_info_option">
+               <radio-group class="radio-group" bindchange="radioChange6">
+                <label class="radio {{item.checked ? 'active' : ''}}" wx:for="{{radios6}}" wx:key='item.value'>
+                  <view class="radio-icon"></view>
+                  <radio value="{{item.value}}" checked="{{item.checked}}" data-id='{{item.value}}' data-name="{{item.label}}"/>{{item.label}}
+                </label>
+              </radio-group> 
+            </view>
+        </view>
+         <view class="bility_total">合计:{{score}}分</view>
+        <view class="bility_info">
+            <p>是否确认申请失能评估</p>
+            <!-- 选项 -->
+            <view class="user_sexbox">
+            <view class='parameter-wrap'>
+              <block wx:for="{{parameter}}" wx:key="parameter">
+                <text class='parameter-info text-over {{item.checked?"checked_parameter":""}}' 
+                data-id='{{item.id}}'  bindtap='parameterTap'>{{item.name}}</text>
+              </block>
+            </view>
+      </view>
+        </view>
+    </view>
+  <view class="bility_explain">
+    <text>说明：自评分值超过40分（含），可提出评估申请，自评分值小于40分的，不建议评估申请。  
+            </text>
+    <text>
+              申明：此表由参表人自评打分，仅作为是否申请失能评估的参考依据，最终结果以正式评估结论为准。   
+            </text>
+  </view>
+  <view class="bility_next" bindtap="getList">
+    提交
+  </view>
+  <view class="mask" wx:if="{{mackShow}}" bindtap="closeMask"></view>
+</view>

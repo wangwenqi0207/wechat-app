@@ -1,0 +1,4 @@
+<!--pages/imgdemo/imgdemo.wxml-->
+<button bindtap="pay">点击我支付</button>
+
+

@@ -1,0 +1,71 @@
+/* pages/myasses/myasses.wxss */
+.myasses{
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f5fa;
+    box-shadow: 2px 3px 5px #ddd;
+}
+.my_assess{
+    background: #ffffff;
+    width: 100%;
+    height: 220rpx;
+    margin-bottom:10rpx;
+}
+.order_number{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60rpx;
+    border-bottom: 1px solid #ccc;
+}
+.order_number image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 20rpx;
+    margin-right:20rpx;
+}
+.order_number p{
+    font-size: 30rpx;
+    margin-right: 20rpx;
+}
+.order_number_left{
+    display: flex;
+}
+.order_info_box{
+    width: 100%;
+    height:150rpx;
+    display: flex; 
+    align-items: center;
+}
+.order_info_box image{
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+.order_info{
+    display: flex;
+    flex-direction: column;
+}
+.order_info p{
+    font-size: 30rpx;
+    margin-top: 10rpx;
+    letter-spacing: 1rpx;
+}
+.order_info .myasses_times{
+    font-size: 27rpx;
+    color: #666;
+    letter-spacing: 1rpx;
+}
+
+/* 数据不存在时 */
+.noInfo{
+  display: flex;
+  justify-content: center;
+}
+.myAssesNo{
+    font-size: 45rpx;
+}

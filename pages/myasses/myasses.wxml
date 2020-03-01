@@ -1,0 +1,24 @@
+ <view class="myasses">
+        <view class="my_assess" wx:for="{{orderList}}" wx:key="item.orderNo"
+         data-id='{{item.orderNo}}' wx:if="{{showList}}">
+            <view class="order_number">
+                <view class="order_number_left">
+                    <image src="/images/pg_icon.png" alt=""/>
+                    <p>订单编号：{{item.orderNo}}</p>
+                </view>
+                <p>{{item.orderStatus}}</p>
+            </view>
+            <view  class="order_info_box" bindtap="go_info" data-newsid="{{item.orderNo}}">
+               <image src="/images/head_default.png" alt=""/>
+               <view class="order_info">
+                    <p>{{item.insName}},{{item.sex}},{{item.age}}岁</p>
+                    <p>{{item.insIdCard}}</p>
+                    <p class="myasses_times">{{item.createdTime}}</p>
+               </view>
+            </view>
+        </view>
+        <view class="noInfo" wx:if="{{noList}}">
+          <text class="myAssesNo">您暂无提交数据</text>
+        </view>
+</view>
+

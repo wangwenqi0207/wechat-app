@@ -1,0 +1,69 @@
+/* pages/bility_login/bility_login.wxss */
+/**index.wxss**/
+.login{
+    width: 100%;
+    margin-top: 40rpx;
+  }
+  .login_title{
+    font-size: 55rpx;
+    margin-left:40rpx;
+    color:#333;
+  }
+  .login form{
+    margin-top: 50rpx;
+  }
+  .login_input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50rpx;
+  }
+  .login_input .phone_number,.login_input .check_code{
+    width: 85%;
+    height: 87rpx;
+    font-size: 30rpx;
+    background: #f2f2f2;
+    border-radius: 10rpx;
+    text-indent: 21rpx;
+  }
+  .login_input2{
+    margin-top: 20rpx;
+    position: relative;
+    display: flex;
+  }
+  .login_input2 .get_code{
+    position: absolute;
+    font-size: 24rpx;
+    background: #448ff7;
+    width: 180rpx;
+    height: 65rpx;
+    color: white;
+    border-radius: 10rpx;
+    right: 8%;
+    z-index: 100;  /*浮动元素要设置z-index 否则绑定不了事件*/
+  }
+  .get_code{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  }
+  .login_next{
+    display: flex;
+    justify-content: center;
+    margin-top: 30rpx;
+  }
+  .login_next button{
+    width: 85%;
+    height: 80rpx;
+    font-size: 40rpx;
+    border-radius: 10rpx;
+    background: #448ff7;
+    color: white;
+    text-align: center;
+    line-height: 80rpx;
+  }
+ .login_input2 .isActive{
+    background: #ccc;
+    color: black;
+  }

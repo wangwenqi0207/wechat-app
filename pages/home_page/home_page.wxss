@@ -1,0 +1,206 @@
+/* pages/home_page/home_page.wxss */
+/* 背景图 */
+.homepage{
+  background: #FAFAFA;
+}
+.homePage_header{
+    width: 100%;
+    height:350rpx;
+    margin-bottom: 40rpx;
+}
+.homePage_header image{
+  width: 100%;
+  height: 100%;
+}
+/* 评估 */
+.homePage_assess{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 80;
+}
+
+.homePage_assess .homePage_apply{
+    width: 28%;
+    height: 200rpx;
+    border-radius: 10rpx;
+    background: #fff;
+    color:#666;
+}
+
+.homePage_apply{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 80;
+}
+.homePage_apply .apply_icon{
+    width: 35%;
+    height: 37%;
+    margin-bottom: 13%;
+}
+.homePage_apply .homePage_apply_view{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homePage_apply .homePage_apply_view text{
+    font-size:  30rpx;
+}
+.homePage_apply .homePage_apply_view image{
+    width: 20rpx;
+    height: 20rpx;
+    margin-left: 9.5%;
+}
+/* 申请流程 */
+.apply_line{
+  background: #FAFAFA;
+}
+.apply_line_tit{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top:50rpx;
+}
+.apply_line_tit .tit{
+   color: #999;
+  font-size: 28rpx;
+}
+.apply_line_tit h1{
+    width: 200rpx;
+    height: 1.5rpx;
+    background: #999;
+    display: block;
+}
+.apply_line_bottom{
+  background: #FAFAFA;
+  margin-top: 30rpx;
+}
+.line_bottom_one{
+  display: flex;
+  margin-left: 30rpx;
+}
+.bottom_one_left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom_one_left image{
+  width: 50rpx;
+  height:50rpx;
+}
+.bottom_one_left h1{
+  width:2rpx;
+  height: 120rpx;
+  background: #666;
+  display: inline-block;
+}
+.bottom_one_right{
+  margin-left:20rpx;
+  margin-right: 20rpx;
+}
+.bottom_one_right h1{
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 600;
+}
+.bottom_one_right text{
+  font-size:27rpx;
+  color: #666;
+}
+/* 热线电话  定位元素如何居中*/ 
+.telphone_box{
+  background: #FAFAFA;
+  margin-top: 50rpx;
+  padding-bottom: 50rpx;
+}
+.homepage_telphone{
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90rpx;
+    border: 1px solid #448ff7;
+    border-radius: 20rpx;
+}
+.homepage_telphone image{
+    margin-right: 20rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+.homepage_telphone h3{
+    font-size: 30rpx;
+}
+
+/* 弹窗 */
+.homepage_dialog{
+    background: rgba(255, 255, 255, .95);
+    position:fixed;
+    width: 70%;
+    height: 200rpx;
+    z-index:99;
+    border-radius: 18px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    animation: scaleDraw 0.5s ease-in ;
+}
+@keyframes scaleDraw {  
+    0%{
+        transform: scale(1.2);  
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.homepage_remind{
+    width: 100%;
+    height: 60%;
+    border-bottom: 1px solid #dddddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homepage_remind h3{
+    font-size: 30rpx;
+}
+.homepage_remind text{
+    font-size: 25rpx;
+    margin-top: 10rpx;
+}
+.call_out{
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+.call_out text{
+    font-size:27rpx;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #448ff7;
+    font-weight: 600;
+}
+.call_out .call_off {
+    border-right: 1px solid #dddddd;
+    font-weight: 600;
+}
+
+/* 蒙版 */
+.homepage_mask{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    background: #000000;
+    opacity: .5;
+}

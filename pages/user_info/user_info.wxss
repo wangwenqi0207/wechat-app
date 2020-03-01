@@ -1,0 +1,78 @@
+.user_info{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background: #f6f5fa;
+    box-shadow: 2px 3px 5px #ddd;
+}
+.user_tit{
+    width: 100%;
+    height:70rpx;
+    font-size: 27rpx;
+    display: flex;
+    align-items: center;
+    padding-left: 7%;
+    color: #448ff7;
+}
+.detail_info{
+    background: white;
+}
+.detail_name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+}
+.detail_name text{
+    font-size: 30rpx;
+    color: #000000;
+}
+
+/* 上传身份证 */
+.up_idcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px #ddd solid;
+}
+.up_idcard text{
+    font-size: 25rpx;
+    margin-top: 30rpx;
+    color: #666;
+}
+.user_info_idcard{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.user_box1{
+    width: 44%;
+    height: 200rpx;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    opacity: 1;
+}
+.user_box2{
+    width: 44%;
+    height: 200rpx;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    opacity: 1;
+}
+
+.user_info_next{
+    width: 100%;
+    height: 90rpx;
+    background: #448ff7;
+    color: #ffffff;
+    font-size: 27rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left:0;
+}

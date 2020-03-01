@@ -1,0 +1,73 @@
+<!--pages/myassesinfo/myassesinfo.wxml-->
+<view class="myassinfo">
+        <view class="state">
+            {{orderStatus}}>
+        </view>
+        <view class="grey_tit">
+            参保人信息
+        </view>
+        <view class="myassinfo_info">
+            <p>参保人姓名</p>
+            <span>{{insName}}</span>
+        </view>
+         <view class="myassinfo_info">
+            <p>性别</p>
+            <span>{{sex}}</span>
+        </view>
+         <view class="myassinfo_info">
+            <p>年龄</p>
+            <span>{{age}}</span>
+        </view>
+         <view class="myassinfo_info">
+            <p>身份证号</p>
+            <span>{{insIdCard}}</span>
+        </view>
+        <view class="myassinfo_info">
+            <p>手机号</p>
+            <span>{{insPhone}}</span>
+        </view>
+        <view class="grey_tit">
+            联系人信息
+        </view>
+         <view class="myassinfo_info">
+            <p>联系人姓名</p>
+            <span>{{contactName}}</span>
+         </view>
+         <view class="myassinfo_info">
+            <p>性别</p>
+            <span>{{contactSex}}</span>
+        </view>
+         <view class="myassinfo_info">
+            <p>身份证号</p>
+            <span>{{contactIdcard}}</span>
+        </view>
+         <view class="myassinfo_info">
+            <p>手机号</p>
+            <span>{{contactPhone}}</span>
+        </view>
+        <view class="myassinfo_info">
+            <p>与参保人关系</p>
+            <span>{{relationshipInsUser}}</span>
+        </view>
+         <view class="grey_tit">
+            联系地址
+        </view>
+        <view class="myassinfo_info">
+            <p>{{city}}</p>
+        </view>
+        <view class="myassinfo_info">
+            <p>{{appointedAddress}}</p>
+        </view>
+         <view class="grey_tit">
+            工单信息
+        </view>
+        <view class="myassinfo_info">
+            <p>工单编号</p>
+            <span>{{orderNo}}</span>
+        </view>
+        <view class="myassinfo_info myassinfo_info2">
+            <p>提交时间</p>
+            <span>{{createdTime}}</span>
+        </view>       
+</view>
+<view class="go_pay" wx:if='{{go_pay}}' bindtap="go_pay">去支付</view>

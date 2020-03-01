@@ -1,0 +1,87 @@
+<!--pages/home_page/home_page.wxml-->
+<view class="homepage">
+        <view class="homePage_header"> 
+            <image src="/images/banner_img.png"></image>
+        </view>
+        <view class="homePage_assess">
+        <view  class="homePage_apply" bindtap="my_asses">
+                <image src="/images/assess_icon.png" alt="" class="apply_icon"/>
+                <view class="homePage_apply_view">
+                    <text>个人自评</text>
+                </view>
+            </view>
+            <view  class="homePage_apply" bindtap="apply_for">
+                <image src="/images/apply_evaluate_icon.png" alt="" class="apply_icon"/>
+                <view class="homePage_apply_view">
+                    <text>申请评估</text>
+                </view>
+            </view>
+            <view  class="homePage_apply" bindtap="go_myasses">
+                <image src="/images/my_evaluate_icon.png" alt="" class="apply_icon"/>
+                <view class="homePage_apply_view">
+                    <text>我的评估</text>
+                </view>
+            </view>
+        </view>
+        <view class="apply_line">
+            <view class="apply_line_tit">
+              <h1></h1>
+              <text class="tit">待遇申请流程</text>
+              <h1></h1>
+            </view>
+            <view class="apply_line_bottom">
+              <view class="line_bottom_one">
+                  <view class="bottom_one_left">
+                      <image src="/images/part1.png"></image>
+                      <h1></h1>
+                  </view>
+                  <view class="bottom_one_right">
+                    <h1>个人自评</h1>
+                    <text>
+                      自评分值超过40分（含），可提出评估申请，自评分值小于40分，不建议评估申请。
+                    </text>
+                  </view>
+              </view>
+              <view class="line_bottom_one">
+                  <view class="bottom_one_left">
+                      <image src="/images/part2.png"></image>
+                      <h1></h1>
+                  </view>
+                  <view class="bottom_one_right">
+                    <h1>申请评估</h1>
+                    <text>
+                      参保人根据自身情况，填写申请评估表提交并缴费40元。
+                    </text>
+                  </view>
+              </view>
+              <view class="line_bottom_one">
+                  <view class="bottom_one_left">
+                      <image src="/images/part3.png"></image>
+                  </view>
+                  <view class="bottom_one_right">
+                    <h1>查看评估</h1>
+                    <text>
+                      参保人提交申请后，点击“我的评估”可查看待遇资格申请的进度与结果。
+                    </text>
+                  </view>
+              </view>
+            </view>
+        </view>
+        <view class="telphone_box">
+          <view class="homepage_telphone" bindtap="cllOut">
+            <image src="/images/hotline_icon.png"/>
+            <h3>热线电话</h3>
+        </view> 
+        </view>
+        <view class="homepage_dialog" wx:if="{{isCall}}">
+            <view class="homepage_remind">
+                <h3>提示</h3>
+                <text>400-365-099</text>
+            </view>
+            <view class="call_out">
+                <text class="call_off" bindtap="callOff">取消</text>
+                <text bindtap="cllOut2">呼叫</text>
+            </view>
+        </view> 
+         <view class="homepage_mask" wx:if="{{isCall}}"></view> 
+    </view>

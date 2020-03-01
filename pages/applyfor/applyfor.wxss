@@ -1,0 +1,73 @@
+/* pages/applyfor/applyfor.wxss */
+li{
+    list-style: none;
+}
+.apply_for{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f5fa;
+    box-shadow: 4rpx 6rpx 10rpx #ddd;
+}
+
+.apply_info{
+    width: 90%;
+    height: 450rpx;
+    background: white;
+    margin:50rpx auto;
+    box-shadow:4rpx 6rpx 10rpx #ddd;
+    border-radius: 40rpx;
+    border:2rpx solid #dddddd;
+}
+.my_apply{
+    width: 100%;
+    /* height: 17%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.my_apply text{
+    font-size: 30rpx;
+    margin-top: 30rpx;
+    margin-bottom: 20rpx;
+    color: #000000;
+}
+.my_apply li{
+    list-style: none;
+    width: 90%;
+    height: 10rpx;
+    background: #ddd;
+    
+}
+.apply_name{
+    width: 90%;
+    height: 90rpx;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3rpx solid #dddddd;
+}
+.apply_name li{
+    font-size: 30rpx;
+    color: #000000;
+}
+.apply_name input{
+    text-align: right;
+    font-size: 30rpx;
+}
+.next_step{
+    width: 87%;
+    height: 90rpx;
+    background: #448ff7;
+    font-size: 30rpx;
+    color: white;
+    border-radius: 30rpx;
+    display: block;
+    margin: 30rpx auto;
+    text-align: center;
+    line-height: 90rpx;
+}

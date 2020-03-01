@@ -1,0 +1,79 @@
+/**index.wxss**/
+.login{
+    width: 100%;
+    margin-top: 40rpx;
+  }
+  .login_title{
+    font-size: 55rpx;
+    margin-left:40rpx;
+    color:#333;
+  }
+  .login form{
+    margin-top: 50rpx;
+  }
+  .login_input{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50rpx;
+  }
+  .login_input .phone_number{
+    width: 85%;
+    height: 87rpx;
+    font-size: 30rpx;
+    background: #f2f2f2;
+    border-radius: 10rpx;
+    text-indent: 21rpx;
+  }
+  .login_input .check_code{
+    width: 59%;
+    height: 87rpx;
+    font-size: 30rpx;
+    background: #f2f2f2;
+    border-radius: 10rpx;
+    text-indent: 21rpx;
+    margin: 0 auto;
+    margin-left: 55rpx;
+  }
+  .login_input2{
+    margin-top: 20rpx;
+    display: flex;
+  }
+  .login_input2 .get_code{
+    /* position: absolute; */
+    font-size: 24rpx;
+    background: #448ff7;
+    width: 24%;
+    height: 65rpx;
+    color: white;
+    border-radius: 10rpx;
+    margin-right: 55rpx;
+    /* right: 8%; */
+    z-index: 200;  /*浮动元素要设置z-index 否则绑定不了事件*/
+  }
+  .get_code{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    z-index: 200;
+  }
+  .login_next{
+    display: flex;
+    justify-content: center;
+    margin-top: 30rpx;
+  }
+  .login_next button{
+    width: 85%;
+    height: 80rpx;
+    font-size: 40rpx;
+    border-radius: 10rpx;
+    background: #448ff7;
+    color: white;
+    text-align: center;
+    line-height: 80rpx;
+  }
+ .login_input2 .isActive{
+    background: #ccc;
+    color: black;
+  }
